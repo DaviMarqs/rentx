@@ -9,13 +9,13 @@ const AppDataSource = new DataSource({
   password: "ignite",
   database: "rentx",
   logging: true,
-  entities: ['./src/modules/**/entities/*.ts'],
+  entities: ["./src/modules/**/entities/*.ts"],
   migrations: ["./src/shared/infra/typeorm/migrations/*.ts"],
   subscribers: [],
-})
+});
 
 export function createConnection(host = "localhost"): Promise<DataSource> {
   return AppDataSource.setOptions({ host }).initialize();
 }
 
-export default AppDataSource
+export default AppDataSource;
