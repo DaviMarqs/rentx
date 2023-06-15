@@ -9,8 +9,8 @@ import {
   PrimaryColumn,
 } from "typeorm";
 import { v4 as uuidV4 } from "uuid";
-import { Category } from "../../../../cars/infra/typeorm/entities/Category";
-import { Specification } from "../../../../cars/infra/typeorm/entities/Specification";
+import { Category } from "./Category";
+import { Specification } from "./Specification";
 
 @Entity("cars")
 class Car {
